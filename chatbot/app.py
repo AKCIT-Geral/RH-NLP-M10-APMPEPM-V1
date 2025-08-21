@@ -16,6 +16,11 @@ from datetime import datetime
 import time
 from flask import Flask, render_template, request, redirect, url_for
 app = Flask(__name__)
+import json
+
+with open("extract_pdf.json", "r", encoding="utf-8") as f:
+    book_data = json.load(f)
+    book_title = book_data.get("title", "Livro não identificado")
 
 # Relação de Livros a serem tratados
 def send_message(user_question):
@@ -61,7 +66,7 @@ def chatbot():
         elif 'exit' in request.form:
             return redirect(url_for('exit_app'))
 
-    return render_template('chatbot.html', question=user_question, response=bot_response)
+    return render_template('chatbot.html', book_title=book_title, question=user_question, response=bot_response)
 
 @app.route('/exit')
 def exit_app():
