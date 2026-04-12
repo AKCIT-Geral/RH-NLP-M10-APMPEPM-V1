@@ -90,7 +90,7 @@ As etapas aqui exibidas foram apresentadas durante as vídeoaulas, disponíveis 
    │   ├── vendas.db
    │   └── virtual_assistant.json
    ├── env_ebook10.yml
-   ├── M4_IMLRN_10-12-24.pdf
+   ├── M4_IMLRN_13-09-25.pdf
    └── README.md
    ```
 
