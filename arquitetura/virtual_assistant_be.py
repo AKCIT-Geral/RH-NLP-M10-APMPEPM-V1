@@ -62,7 +62,7 @@ def monta_prompt(question, contend, prompt_model):
 
 # Submete o promppt ao LLM
 def call_LLM(prompt):
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-3.1-flash-lite-preview')
     result = model.generate_content(prompt)
     return result.text
 
