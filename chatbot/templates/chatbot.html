@@ -52,7 +52,7 @@
 </head>
 <body>
     <h1>Chatbot de Exemplo</h1>
-	<h2>Responde sobre o Livro: Introdução a Machine Learning e Redes Neurais</h2>
+	<h2>Responde sobre o Livro: {{ book_title }}</h2>
     <form method="POST">
         <label for="question">Pergunta:</label><br>
         <input type="text" id="question" name="question" placeholder="Digite sua pergunta aqui..." value="{{ question }}"><br>
